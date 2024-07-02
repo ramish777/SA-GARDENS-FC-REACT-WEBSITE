@@ -18,22 +18,22 @@ const Navbar = () => {
   };
 
   // Function to close the dropdown when the window is resized to mobile size
-  const closeDropdownOnResize = () => {
-    if (window.innerWidth >= 768) { // Adjust this threshold as per your design's breakpoint for mobile
-      if (isDropdownOpen) {
-        toggleDropdown();
-      }
-    }
-  };
+  // const closeDropdownOnResize = () => {
+  //   if (window.innerWidth >= 768) { // Adjust this threshold as per your design's breakpoint for mobile
+  //     if (isDropdownOpen) {
+  //       toggleDropdown();
+  //     }
+  //   }
+  // };
 
   // Effect to add resize event listener
-  useEffect(() => {
-    window.addEventListener('resize', closeDropdownOnResize);
-    updateNavbarHeight();
-    return () => {
-      window.removeEventListener('resize', closeDropdownOnResize);
-    };
-  }, [isDropdownOpen]);
+  // useEffect(() => {
+  //   window.addEventListener('resize', closeDropdownOnResize);
+  //   updateNavbarHeight();
+  //   return () => {
+  //     window.removeEventListener('resize', closeDropdownOnResize);
+  //   };
+  // }, [closeDropdownOnResize]);
 
   // Effect to update navbar height when dropdown state changes
   useEffect(() => {
