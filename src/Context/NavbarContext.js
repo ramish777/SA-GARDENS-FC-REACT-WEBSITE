@@ -22,10 +22,6 @@ export const NavbarProvider = ({ children }) => {
         setActiveLink(page); // Set the active page link
     };
 
-    const clearActiveLink = () => {
-        setActiveLink("false");
-    };
-
     return (
     <NavbarContext.Provider value={{ isDropdownOpen, toggleDropdown, activeLink, handleLinkClick, setActiveLink }}>
         {children}
