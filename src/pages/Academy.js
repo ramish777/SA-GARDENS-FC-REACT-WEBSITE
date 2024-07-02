@@ -9,7 +9,6 @@ import PricingCard from '../components/PriceCard';
 
 
 const Academy = () => {
-    const location = [bg_2, bg_3, bg_2];
     const images = [bg_2, bg_3, bg_2, bg_3];
     const [currentIndex, setCurrentIndex] = useState(0);
   

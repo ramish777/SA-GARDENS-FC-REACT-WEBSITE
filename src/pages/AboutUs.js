@@ -84,6 +84,7 @@ const AboutUs = () => {
                     </div>
                     <div className="relative flex flex-col md:flex-col mt-8 md:mt-8 md:mr-32">
                     <iframe
+                        title="uniqueTitle"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3393.4522613754784!2d74.26358017512803!3d31.730854136713624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39191f320e5f28b1%3A0x93ad1e608ed90b5c!2sS%20A%20Gardens%20Main%20Enterance%20Gate!5e0!3m2!1sen!2s!4v1719577411477!5m2!1sen!2s"
                         width="100%"
                         height="450"
