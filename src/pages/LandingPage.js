@@ -31,7 +31,7 @@ const LandingPage = () => {
           nextImage();
         }, 5000); // Change image every 5 seconds
         return () => clearInterval(interval); // Clean up the interval on component unmount
-    }, []);
+    });
 
     return (
         <div className="relative w-full min-h-screen bg-black">

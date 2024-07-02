@@ -7,14 +7,14 @@ import Carousel from '../components/Carousel';
 import { useContext, useEffect } from 'react';
 import { NavbarContext } from '../Context/NavbarContext';
 
-const Awards_2020 = () => {
+const Awards2020 = () => {
     const images = [bg_2, bg_3, bg_2, bg_3];
 
     const {setActiveLink } = useContext(NavbarContext);
 
     useEffect(() => {
         setActiveLink();
-      }, []);
+      });
 
     return (
         <div className="relative w-full min-h-screen bg-black">
@@ -81,4 +81,4 @@ const Awards_2020 = () => {
     );
 };
 
-export default Awards_2020;
+export default Awards2020;

@@ -8,14 +8,14 @@ import { NavbarContext } from '../Context/NavbarContext';
 
 
 
-const Awards_2022 = () => {
+const Awards2022 = () => {
     const images = [bg_2, bg_3, bg_2, bg_3];
 
     const {setActiveLink } = useContext(NavbarContext);
 
     useEffect(() => {
         setActiveLink();
-      }, []);
+      });
 
     return (
         <div className="relative w-full min-h-screen bg-black">
@@ -156,4 +156,4 @@ const Awards_2022 = () => {
     );
 };
 
-export default Awards_2022;
+export default Awards2022;

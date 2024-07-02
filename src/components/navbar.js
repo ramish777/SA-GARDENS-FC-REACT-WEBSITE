@@ -1,11 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import logo_1 from "../images/logo_1.png";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { NavbarContext } from '../Context/NavbarContext';
 
 const Navbar = () => {
   const { isDropdownOpen, toggleDropdown, activeLink, setActiveLink } = useContext(NavbarContext);
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -56,7 +55,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  });
 
   // Handle link click
   const handleLinkClick = (page, section) => {
