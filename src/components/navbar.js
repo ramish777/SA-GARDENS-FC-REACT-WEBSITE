@@ -16,25 +16,7 @@ const Navbar = () => {
       setNavbarHeight(navbarRef.current.offsetHeight);
     }
   };
-
-  // Function to close the dropdown when the window is resized to mobile size
-  // const closeDropdownOnResize = () => {
-  //   if (window.innerWidth >= 768) { // Adjust this threshold as per your design's breakpoint for mobile
-  //     if (isDropdownOpen) {
-  //       toggleDropdown();
-  //     }
-  //   }
-  // };
-
-  // Effect to add resize event listener
-  // useEffect(() => {
-  //   window.addEventListener('resize', closeDropdownOnResize);
-  //   updateNavbarHeight();
-  //   return () => {
-  //     window.removeEventListener('resize', closeDropdownOnResize);
-  //   };
-  // }, [closeDropdownOnResize]);
-
+  
   // Effect to update navbar height when dropdown state changes
   useEffect(() => {
     updateNavbarHeight();
@@ -60,14 +42,12 @@ const Navbar = () => {
   // Handle link click
   const handleLinkClick = (page, section) => {
     setActiveLink(page);
-    if (window.innerWidth < 768 && isDropdownOpen) {
-      toggleDropdown(); // Close dropdown on link click
-    }
+    // Removed the toggleDropdown call to prevent closing the dropdown
   };
 
   // Determine the active link and hash
   const getActiveLinkClass = (page, section) => {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1024) {
       if (activeLink === page) {
         if (section && window.location.hash === `#${section}`) {
           return 'bg-gray-700 text-white'; // Active page with specific section
@@ -102,7 +82,7 @@ const Navbar = () => {
           <button
             onClick={toggleDropdown}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-dropdown"
             aria-expanded={isDropdownOpen}
           >
@@ -111,12 +91,12 @@ const Navbar = () => {
               <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
             </svg>
           </button>
-          <div className={`${isDropdownOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`} id="navbar-dropdown">
-            <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+          <div className={`${isDropdownOpen ? 'block' : 'hidden'} w-full lg:block lg:w-auto`} id="navbar-dropdown">
+            <ul className="flex flex-col font-medium p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0 lg:border-0 lg:bg-transparent dark:bg-gray-800 lg:dark:bg-transparent dark:border-gray-700">
               <li>
                 <Link
                   to="/"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('Home')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('Home')}`}
                   onClick={() => handleLinkClick('Home')}
                 >
                   Home
@@ -125,7 +105,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/about-us"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('About Us')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('About Us')}`}
                   onClick={() => handleLinkClick('About Us')}
                 >
                   About Us
@@ -134,7 +114,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/academy"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('Academy')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('Academy')}`}
                   onClick={() => handleLinkClick('Academy')}
                 >
                   Academy
@@ -143,7 +123,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/academy#price"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('Academy', 'price')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('Academy', 'price')}`}
                   onClick={() => handleLinkClick('Academy', 'price')}
                 >
                   Price
@@ -152,7 +132,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('Join Us')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('Join Us')}`}
                   onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLSfCOYbkn_ZBPItidbVny18AZM2-6UfXStsCB7_wCNJoO-xD9w/viewform?usp=sf_link", "_blank")}
                 >
                   Join Us
@@ -161,7 +141,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/our-partners"
-                  className={`block py-2 px-3 text-gray-900 rounded md:border-0 md:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${getActiveLinkClass('Our Partners')}`}
+                  className={`block py-2 px-3 text-gray-900 rounded lg:border-0 lg:p-0 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent ${getActiveLinkClass('Our Partners')}`}
                   onClick={() => handleLinkClick('Our Partners')}
                 >
                   Our Partners

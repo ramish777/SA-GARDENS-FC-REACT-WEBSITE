@@ -25,13 +25,13 @@ const Awards2020 = () => {
                 <div className="relative z-10 h-full overflow-y-auto">
                     <Navbar />
 
-                    <div className="flex flex-col mt-20 md:flex-row justify-center md:mt-40 p-4">
-                        <div className="w-full md:w-2/3 justify-center items-center">
-                            <h1 className="text-2xl md:text-4xl sm:text-4xl font-bold text-white text-center">Achievements (2020)</h1>
-                            <p className="text-sm md:text-lg text-gray-300 mt-4">
+                    <div className="flex flex-col mt-20 lg:flex-row justify-center lg:mt-40 p-4">
+                        <div className="w-full lg:w-2/3 justify-center items-center">
+                            <h1 className="text-2xl lg:text-4xl sm:text-4xl font-bold text-white text-center">Achievements (2020)</h1>
+                            <p className="text-sm lg:text-lg text-gray-300 mt-4">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante tellus. Nullam id dui justo. Proin sollicitudin varius dolor, ac mollis nisi imperdiet ac. Duis in odio ligula. Mauris auctor ligula eu libero convallis, non faucibus odio laoreet.
                             </p>
-                            <p className="text-sm md:text-lg text-gray-300 mt-4">
+                            <p className="text-sm lg:text-lg text-gray-300 mt-4">
                                 Morbi ac libero vel turpis dictum pretium. Sed sodales urna et lacus fringilla, a congue leo dictum. Donec et feugiat nisi.
                             </p>
                         </div>
@@ -41,16 +41,16 @@ const Awards2020 = () => {
 
             {/* Fame Cup - Model Town */}
             <div className="flex flex-col p-4 bg-gray-700">
-                <div className="flex flex-col items-start md:ml-32 md:mt-8 p-4">
-                    <div className="flex items-center md:mr-8 sm:mr-8">
-                    <div className="w-1.5 h-10 md:w-2.5 bg-red-600"></div>
-                    <h2 className="text-white text-2xl font-bold ml-4">Fame Cup - Model Town</h2>
+                <div className="flex flex-col items-start lg:ml-32 lg:mt-8 p-4">
+                    <div className="flex items-center lg:mr-8 sm:mr-8">
+                        <div className="w-1.5 h-10 lg:w-2.5 bg-red-600"></div>
+                        <h2 className="text-white text-2xl font-bold ml-4">Fame Cup - Model Town</h2>
                     </div>
-                    <div className="relative flex flex-col md:flex-row mt-8 md:mt-8 md:mr-32">
-                        <div className="relative md:w-4/6">
+                    <div className="relative flex flex-col lg:flex-row mt-8 lg:mt-8 lg:mr-32">
+                        <div className="relative lg:w-4/6">
                             <Carousel images={images} />
                         </div>
-                        <p className="text-sm md:text-lg md:w-2/6 md:ml-8 text-gray-300">
+                        <p className="text-sm lg:text-lg lg:w-2/6 lg:ml-8 text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante tellus. Nullam id dui justo. Proin sollicitudin varius dolor, ac mollis nisi imperdiet ac. Duis in odio ligula. Mauris auctor ligula eu libero convallis, non faucibus odio laoreet.
                         </p>
                     </div>
@@ -59,16 +59,16 @@ const Awards2020 = () => {
 
             {/* All Pakistan Cup - Depalpur */}
             <div className="flex flex-col p-4 bg-gray-700">
-                <div className="flex flex-col items-start md:ml-32 md:mt-8 p-4">
-                    <div className="flex items-center md:mr-8 sm:mr-8">
-                    <div className="w-1.5 h-10 md:w-2.5 bg-red-600"></div>
-                    <h2 className="text-white text-2xl font-bold ml-4">All Pakistan Cup - Depalpur</h2>
+                <div className="flex flex-col items-start lg:ml-32 lg:mt-8 p-4">
+                    <div className="flex items-center lg:mr-8 sm:mr-8">
+                        <div className="w-1.5 h-10 lg:w-2.5 bg-red-600"></div>
+                        <h2 className="text-white text-2xl font-bold ml-4">All Pakistan Cup - Depalpur</h2>
                     </div>
-                    <div className="relative flex flex-col md:flex-row mt-8 md:mt-8 md:mr-32">
-                        <div className="relative md:w-4/6">
+                    <div className="relative flex flex-col lg:flex-row mt-8 lg:mt-8 lg:mr-32">
+                        <div className="relative lg:w-4/6">
                             <Carousel images={images} />
                         </div>
-                        <p className="text-sm md:text-lg md:w-2/6 md:ml-8 text-gray-300">
+                        <p className="text-sm lg:text-lg lg:w-2/6 lg:ml-8 text-gray-300">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante tellus. Nullam id dui justo. Proin sollicitudin varius dolor, ac mollis nisi imperdiet ac. Duis in odio ligula. Mauris auctor ligula eu libero convallis, non faucibus odio laoreet.
                         </p>
                     </div>
@@ -78,6 +78,7 @@ const Awards2020 = () => {
             {/* footer */}
             <Footer />
         </div>
+
     );
 };
 

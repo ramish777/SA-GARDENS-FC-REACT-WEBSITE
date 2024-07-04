@@ -119,69 +119,66 @@ const PlayerCard = ({ player }) => {
 const FutsalPlayer = () => {
     return (
         <div className="relative flex-col w-full min-h-screen bg-black">
-            <div className="relative w-full h-screen">
-                <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${bg_3})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
-                </div>
-                <div className="relative z-10 h-full overflow-y-auto">
-                    <Navbar />
-                    <div className="flex flex-col mt-20 md:flex-row items-center justify-center md:mt-40 md:mb-40 p-4">
-                        <div className="w-full md:w-2/3 justify-center items-center">
-                            <h1 className="text-2xl md:text-4xl sm:text-4xl font-bold text-white text-center">Our Futsal Players</h1>
-                            <p className="text-sm md:text-lg text-gray-300 mt-4">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante tellus. Nullam id dui justo. Proin sollicitudin varius dolor, ac mollis nisi imperdiet ac. Duis in odio ligula. Mauris auctor ligula eu libero convallis, non faucibus odio laoreet.
-                            </p>
-                            <p className="text-sm md:text-lg text-gray-300 mt-4">
-                                Morbi ac libero vel turpis dictum pretium. Sed sodales urna et lacus fringilla, a congue leo dictum. Donec et feugiat nisi.
-                            </p>
-                        </div>
+        <div className="relative w-full h-screen">
+            <div className="absolute inset-0 z-0" style={{ backgroundImage: `url(${bg_3})`, backgroundSize: 'cover', backgroundPosition: 'top' }}>
+                <div className="absolute inset-0 bg-black opacity-50"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-700"></div> */}
+            </div>
+            <div className="relative z-10 h-full overflow-y-auto">
+                <Navbar />
+                <div className="flex flex-col mt-20 lg:flex-row items-center justify-center lg:mt-40 lg:mb-40 p-4">
+                    <div className="w-full lg:w-2/3 justify-center items-center">
+                        <h1 className="text-2xl lg:text-4xl sm:text-4xl font-bold text-white text-center">Our Futsal Players</h1>
+                        <p className="text-sm lg:text-lg text-gray-300 mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ante tellus. Nullam id dui justo. Proin sollicitudin varius dolor, ac mollis nisi imperdiet ac. Duis in odio ligula. Mauris auctor ligula eu libero convallis, non faucibus odio laoreet.
+                        </p>
+                        <p className="text-sm lg:text-lg text-gray-300 mt-4">
+                            Morbi ac libero vel turpis dictum pretium. Sed sodales urna et lacus fringilla, a congue leo dictum. Donec et feugiat nisi.
+                        </p>
                     </div>
                 </div>
             </div>
-
-            {/* Players */}
-            <div className="flex flex-col p-4 bg-gray-700">
-                <div className="flex flex-col items-center md:ml-32 md:mr-32 md:mt-8 p-4">
-                    <div className="flex items-center text-4xl md:mr-8 sm:mr-8">
-                        <h2 className="text-white text-4xl font-bold ml-4">Head Coach</h2>
-                    </div>
-                    <div className="flex flex-col md:mt-8 bg-gray-700">
-                        <div className="flex flex-wrap">
-                            {HeadCoach.map((player, index) => (
-                                <div key={index} className="w-full p-4">
-                                    <PlayerCard player={player} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Players */}
-            <div className="flex flex-col p-4 bg-gray-700">
-                <div className="flex flex-col items-center md:ml-32 md:mr-32 md:mt-8 p-4">
-                    <div className="flex items-center text-4xl md:mr-8 sm:mr-8">
-                        <h2 className="text-white text-4xl font-bold ml-4">Our Players</h2>
-                    </div>
-                    <div className="flex flex-col md:mt-8 bg-gray-700">
-                        <div className="flex flex-wrap">
-                            {players.map((player, index) => (
-                                <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-4">
-                                <PlayerCard player={player} />
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            
-
-            {/* footer */}
-            <Footer/>
-
-            
         </div>
+
+        {/* Players */}
+        <div className="flex flex-col p-4 bg-gray-700">
+            <div className="flex flex-col items-center lg:ml-32 lg:mr-32 lg:mt-8 p-4">
+                <div className="flex items-center text-4xl lg:mr-8 sm:mr-8">
+                    <h2 className="text-white text-4xl font-bold ml-4">Head Coach</h2>
+                </div>
+                <div className="flex flex-col lg:mt-8 bg-gray-700">
+                    <div className="flex flex-wrap">
+                        {HeadCoach.map((player, index) => (
+                            <div key={index} className="w-full p-4">
+                                <PlayerCard player={player} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Players */}
+        <div className="flex flex-col p-4 bg-gray-700">
+            <div className="flex flex-col items-center lg:ml-32 lg:mr-32 lg:mt-8 p-4">
+                <div className="flex items-center text-4xl lg:mr-8 sm:mr-8">
+                    <h2 className="text-white text-4xl font-bold ml-4">Our Players</h2>
+                </div>
+                <div className="flex flex-col lg:mt-8 bg-gray-700">
+                    <div className="flex flex-wrap">
+                        {players.map((player, index) => (
+                            <div key={index} className="w-full sm:w-1/2 lg:w-1/3 p-4">
+                                <PlayerCard player={player} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* footer */}
+        <Footer />
+    </div>
     );
 };
 

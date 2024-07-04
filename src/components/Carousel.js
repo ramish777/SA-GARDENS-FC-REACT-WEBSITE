@@ -25,7 +25,7 @@ const Carousel = ({ images }) => {
             </div>
             <button
                 type="button"
-                className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                className="absolute top-0 left-0 z-1 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 onClick={prevImage}
             >
                 <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-red-700 group-hover:bg-red-600 group-focus:ring-4 group-focus:ring-red-600 group-focus:outline-none">
@@ -50,7 +50,7 @@ const Carousel = ({ images }) => {
 
             <button
                 type="button"
-                className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                className="absolute top-0 right-0 z-1 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 onClick={nextImage}
             >
                 <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-red-700 group-hover:bg-red-600 group-focus:ring-4 group-focus:ring-red-600 group-focus:outline-none">
